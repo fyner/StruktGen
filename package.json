@@ -1,0 +1,66 @@
+{
+  "name": "StruktGen",
+  "version": "1.1.0",
+  "description": "Katalogų ir failų struktūros generatorius",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "FyNer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fyner/StruktGen.git"
+  },
+  "keywords": [
+    "electron",
+    "file",
+    "directory",
+    "structure",
+    "generator"
+  ],
+  "bugs": {
+    "url": "https://github.com/fyner/StruktGen/issues"
+  },
+  "homepage": "https://github.com/fyner/StruktGen/blob/main/README.md",
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "asar": true,
+    "appId": "com.example.struktgen",
+    "productName": "StruktGen",
+    "directories": {
+      "output": "dist"
+    },
+    "icon": "logo.png",
+    "files": [
+      "main.js",
+      "package.json",
+      "preload.js",
+      "settings.json",
+      "public/**/*",
+      "logo.png"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "StruktGen"
+    }
+  }
+}

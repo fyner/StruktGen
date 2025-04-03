@@ -1,0 +1,125 @@
+/* Bendras pagrindinis stilius */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F5EEDC; /* Kreminis fonas */
+  color: #183B4E;           /* Tamsus mėlynas tekstui */
+}
+
+/* Konteineris – centruotas turinys */
+.container-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Sticky header su gradientu, centralizuotu pavadinimu */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, #27548A, #DDA853, #27548A);
+  color: #F5EEDC;
+  padding: 12px 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 2px solid #183B4E;
+}
+
+/* Header pavadinimas */
+.sticky-header h1,
+.sticky-header h2,
+.sticky-header .header-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Naujas grįžimo mygtuko stilius – pozicionuojamas absoliučiai kairėje, nepaveikiantis centro */
+.sticky-back-btn {
+  position: absolute;
+  left: 24px; /* išlaiko atstumą, atitinkantį header padding */
+  background-color: transparent;
+  color: #F5EEDC;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.sticky-back-btn:hover {
+  color: #DDA853;
+}
+
+/* Kortelių stilius */
+.card {
+  margin-bottom: 1rem;
+  border: 1px solid #27548A;
+  border-radius: 8px;
+  background-color: #F5EEDC;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* Mygtukų stilius */
+.btn {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background-color: #DDA853;
+  color: #183B4E;
+  border: 1px solid #27548A;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #C49B40;
+  border-color: #183B4E;
+}
+
+/* Formos elementai */
+.form-control {
+  background-color: #fff;
+  border: 1px solid #27548A;
+  color: #183B4E;
+}
+
+.form-control::placeholder {
+  color: #888;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Lentelės stilius */
+.table {
+  color: #183B4E;
+  margin-bottom: 0;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #27548A;
+  padding: 8px;
+}
+
+/* Nuorodų stilius */
+a {
+  color: #27548A;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #DDA853;
+}

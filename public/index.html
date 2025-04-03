@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <title>Struktūros generatorius</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sticky header – be grįžimo mygtuko -->
+  <header class="sticky-header">
+    <h1 class="m-0">Struktūros generatorius</h1>
+  </header>
+  
+  <div class="container-main">
+    <div class="card">
+      <div class="card-body">
+        <div class="mb-3">
+          <label for="structureInput" class="form-label">Įveskite, ką norite sukurti:</label>
+          <textarea id="structureInput" class="form-control" rows="6" placeholder="Pvz.: Projektas>failas.txt[Turinys],Dokumentas.txt"></textarea>
+        </div>
+        <div class="d-grid">
+          <button id="createBtn" class="btn">Sukurti struktūrą</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h3>Rezultatai</h3>
+        <div id="resultsArea">
+          <p class="text-muted">Rezultatų kol kas nėra.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Skriptai -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="renderer.js"></script>
+  <script src="common.js"></script>
+</body>
+</html>
